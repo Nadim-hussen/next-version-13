@@ -22,7 +22,7 @@ export default async function Home() {
     <Link href='/address'>Address</Link>
     <h1>Hello world</h1>
     <h1>{count}</h1>
-    <button  type="button" className="btn btn-primary">Add</button>
+    <button type="button" className="btn btn-primary">Add</button>
     {data.map((item,i)=>{
       return <h6 key={i}>{item.title.toUpperCase()}</h6>
 
