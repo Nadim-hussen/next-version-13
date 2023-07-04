@@ -1,5 +1,6 @@
 'use client';
 import { useRouter } from 'next/navigation';
+import { redirect } from 'next/navigation';
 import Link from 'next/link';
 import { useState } from 'react';
 export default function Address() {
@@ -29,7 +30,8 @@ export default function Address() {
 
   };
   const resend = (e) => {
-    return push('/')
+    confirm('hello world')
+    return redirect('/')
   };
   return (
     <div className='container'>
@@ -51,8 +53,8 @@ export default function Address() {
   <button type="submit" className="btn btn-primary">Submit</button> */
   }
 </form>
-  <button onClick={resend}>Home</button>
-    {/* <Link href='/'>Home</Link> */}
+  <button ><Link href='/'>Home</Link></button>
+
     </div>
   )
 }
