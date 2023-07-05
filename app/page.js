@@ -20,6 +20,7 @@ export default async function Home() {
   return (
     <div className='container text-primary'>
     <Link href='/address'>Address</Link>
+    <Link href='/currency'>Currency</Link>
     <h1>Hello world</h1>
     <h1>{count}</h1>
     <button type="button" className="btn btn-primary">Add</button>
