@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+// npm i prisma --save-dev
+// npx prisma init --datasource-provider mysql/sqlite
+// npx prisma migrate dev --name init
+model User {
+  id Int @id @default(autoincrement())
+  FullName String @db.VarChar(255) @map("full_name") // javascript code a FullName hisebe takbe kintu database a full_name hisebe takbe
+  email String @db.VarChar(255) @unique
+  password String @db.VarChar(255)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
